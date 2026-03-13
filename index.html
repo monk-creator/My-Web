@@ -14,11 +14,88 @@
         }
         h1 { color: #333; }
         p { color: #666; line-height: 1.6; }
+        .photo-section {
+            margin-top: 40px;
+        }
+        .contact-section {
+            margin-top: 40px;
+            text-align: left;
+        }
+        .contact-section h2 {
+            text-align: center;
+        }
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        .contact-form label {
+            font-weight: bold;
+        }
+        .contact-form input,
+        .contact-form textarea {
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            font-family: inherit;
+        }
+        .contact-form button {
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            background-color: #333;
+            color: #fff;
+            cursor: pointer;
+        }
+        .contact-form button:hover {
+            background-color: #555;
+        }
+        .photo-grid {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .photo-grid img {
+            width: 100%;
+            max-width: 200px;
+            border-radius: 8px;
+        }
     </style>
 </head>
 <body>
     <h1>Hello, World!</h1>
     <p>This is my first website hosted on GitHub Pages.</p>
     <p>Welcome to my page!</p>
+
+    <section class="photo-section">
+        <h2>Photos</h2>
+        <div class="photo-grid">
+            <img src="https://images.pexels.com/photos/1257860/pexels-photo-1257860.jpeg" alt="Imaginary neon city at night">
+            <img src="https://images.pexels.com/photos/1478517/pexels-photo-1478517.jpeg" alt="Imaginary mountain landscape above the clouds">
+            <img src="https://images.pexels.com/photos/206359/pexels-photo-206359.jpeg" alt="Imaginary forest path with glowing light">
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <h2>Contact Me</h2>
+        <form class="contact-form" action="#" method="post">
+            <div>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name" required>
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required>
+            </div>
+            <div>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" placeholder="Your message" required></textarea>
+            </div>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
 </body>
 </html>
