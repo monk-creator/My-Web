@@ -1,2 +1,2 @@
-# My-Web
+# my-web
 My First Web project
